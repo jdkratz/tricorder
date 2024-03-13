@@ -27,3 +27,7 @@
   Adafruit Mini GPS PA1010D - UART and I2C - STEMMA QT [https://www.adafruit.com/product/4415] ($30)
 
   Light Level / Spectrum
+
+  Battery
+
+  Battery Monitor [https://www.adafruit.com/product/5580]
