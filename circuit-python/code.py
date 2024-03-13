@@ -5,6 +5,8 @@ import displayio
 import adafruit_lsm303_accel
 import adafruit_lis2mdl
 import adafruit_ssd1306
+import adafruit_lps2x
+import adafruit_sht4x
 import adafruit_display_text
 import terminalio
 import busio
@@ -16,6 +18,8 @@ pixels = neopixel.NeoPixel(board.NEOPIXEL, 1, brightness=0.01)
 i2c = board.STEMMA_I2C()
 sensor = adafruit_lsm303_accel.LSM303_Accel(i2c)
 mag = adafruit_lis2mdl.LIS2MDL(i2c)
+lps = adafruit_lps2x.LPS22(i2c)
+sht = adafruit_sht4x.SHT4x(i2c)
 
 displayio.release_displays()
 
@@ -30,43 +34,36 @@ display = adafruit_ssd1306.SSD1306_I2C(display_width, display_height, i2c)
 display.fill(0)
 display.show()
 
-
-# Set a pixel in the middle 64, 16 position.
-#display.pixel(64, 16, 1)
-# Set a pixel in the opposite 127, 31 position.
-#display.pixel(127, 31, 1)
-#display.show()
-
 while True:
 #    print("  Running...")
-#    pixels.fill((0, 255, 255))
-#    display.fill(0)
-    # Set a pixel in the origin 0,0 position.
-    #display.pixel(0, 0, 1)
-#    display.text("hello world", 0, 0, 1)
-#    display.show()
-#    time.sleep(0.5)
-#    pixels.fill((0, 0, 0))
-#    display.fill(0)
-    # Set a pixel in the middle 64, 16 position.
-#    display.pixel(64, 16, 1)
+#    pixels.fill((0, 255, 255))    display.fill(0)
+#    display.t
 #    display.show()
 #    time.sleep(0.5)
     accel_x, accel_y, accel_z = sensor.acceleration
     mag_x, mag_y, mag_z = mag.magnetic
-    str_acc_x = builtins.str(accel_x)
-    str_acc_y = builtins.str(accel_y)
-    str_acc_z = builtins.str(accel_z)
-    str_mag_x = builtins.str(mag_x)
-    str_mag_y = builtins.str(mag_y)
-    str_mag_z = builtins.str(mag_z)
+    str_acc_x = builtins.str("%.1f" % accel_x)
+    str_acc_y = builtins.str("%.1f" % accel_y)
+    str_acc_z = builtins.str("%.1f" % accel_z)
+    str_mag_x = builtins.str("%.1f" % mag_x)
+    str_mag_y = builtins.str("%.1f" % mag_y)
+    str_mag_z = builtins.str("%.1f" % mag_z)
+    temperature = builtins.str("%.1f C" % lps.temperature)
+    humidity = builtins.str("%.1f" % sht.relative_humidity)
+    pressure  = builtins.str("%.1f" % lps.pressure)
     display.fill(0)
-    display.text(str_acc_x, 0, 0, 1)
-    display.text(str_acc_y, 0, 8, 1)
-    display.text(str_acc_z, 0, 16, 1)
-    display.text(str_mag_x, 64, 0, 1)
-    display.text(str_mag_y, 64, 8, 1)
-    display.text(str_mag_z, 64, 16, 1)
+    display.text("ACC", 5, 0, 1)
+    display.text(str_acc_x, 0, 8, 1)
+    display.text(str_acc_y, 0, 16, 1)
+    display.text(str_acc_z, 0, 24, 1)
+    display.text("MAG", 40, 0, 1)
+    display.text(str_mag_x, 35, 8, 1)
+    display.text(str_mag_y, 35, 16, 1)
+    display.text(str_mag_z, 35, 24, 1)
+    display.text("ENV", 100, 0, 1)
+    display.text(temperature, 90, 16, 1)
+    display.text(humidity, 90, 24, 1)
+    display.text(pressure, 90, 8, 1)
     display.show()
 #    print("Running...")
 #    time.sleep(0.5)
