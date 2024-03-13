@@ -30,4 +30,6 @@
 
   Battery
 
-  Battery Monitor [https://www.adafruit.com/product/5580]
+  Battery Monitor [https://www.adafruit.com/product/5580] ($7)
+
+  Battery Charger [https://www.adafruit.com/product/259] ($13)
