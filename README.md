@@ -26,7 +26,7 @@
 
   Adafruit Mini GPS PA1010D - UART and I2C - STEMMA QT [https://www.adafruit.com/product/4415] ($30)
 
-  Light Level / Spectrum
+  Adafruit AS7341 10-Channel Light / Color Sensor Breakout - STEMMA QT / Qwiic [https://www.adafruit.com/product/4698] ($16)
 
   Battery
 
