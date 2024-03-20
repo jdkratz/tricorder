@@ -40,6 +40,8 @@
 
   Adafruit 9-DOF Absolute Orientation IMU Fusion Breakout - BNO055 - STEMMA QT / Qwiic [https://www.adafruit.com/product/4646] ($30)
 
+  Adafruit MLX90640 24x32 IR Thermal Camera Breakout - 110 Degree FoV [https://www.adafruit.com/product/4469] ($75)
+
 
 
   
