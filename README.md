@@ -26,6 +26,8 @@
 
   Adafruit DS3231 Precision RTC - STEMMA QT [https://www.adafruit.com/product/5188] ($14)
 
+  GY-906 MLX90614 Non-Contact IR Infrared Temperature Sensor [https://www.amazon.com/gp/product/B0B63K5V7T] ($12)
+
   Adafruit LTR390 UV Light Sensor - STEMMA QT / Qwiic [https://www.adafruit.com/product/4831] ($5)
 
   Adafruit BMP388 - Precision Barometric Pressure and Altimeter - STEMMA QT [https://www.adafruit.com/product/3966] (Replace LPS22HB) ($10)
