@@ -24,7 +24,7 @@
 
 
 ### To Add:
-  Adafruit DS3231 Precision RTC - STEMMA QT [https://www.adafruit.com/product/5188] ($14)
+  Adafruit Mini GPS PA1010D - UART and I2C - STEMMA QT (w/RTC) [https://www.adafruit.com/product/4415] ($30)
 
   Adafruit AS7341 10-Channel Light / Color Sensor Breakout - STEMMA QT / Qwiic [https://www.adafruit.com/product/4698] ($16)
   
@@ -33,8 +33,6 @@
   Adafruit BME680 - Temperature, Humidity, Pressure and Gas Sensor - STEMMA QT [https://www.adafruit.com/product/3660] (Replace SHT4 & LPS22HB0) ($19)
 
   Adafruit SGP30 Air Quality Sensor Breakout - VOC and eCO2 - STEMMA QT / Qwiic [https://www.adafruit.com/product/3709] ($18)
-
-  Adafruit Mini GPS PA1010D - UART and I2C - STEMMA QT [https://www.adafruit.com/product/4415] ($30)
 
   Adafruit 9-DOF Absolute Orientation IMU Fusion Breakout - BNO055 - STEMMA QT / Qwiic [https://www.adafruit.com/product/4646] (Replace LSM303AGR) ($30)
 
